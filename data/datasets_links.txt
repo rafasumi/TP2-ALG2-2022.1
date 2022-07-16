@@ -1,0 +1,11 @@
+https://archive.ics.uci.edu/ml/datasets/Audit+Data
+https://archive.ics.uci.edu/ml/datasets/Contraceptive+Method+Choice
+https://archive.ics.uci.edu/ml/datasets/banknote+authentication
+https://archive.ics.uci.edu/ml/datasets/Iris
+https://archive.ics.uci.edu/ml/datasets/Mammographic+Mass
+https://archive.ics.uci.edu/ml/datasets/Maternal+Health+Risk+Data+Set
+https://archive.ics.uci.edu/ml/datasets/Estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition+
+https://archive.ics.uci.edu/ml/datasets/Raisin+Dataset
+https://archive.ics.uci.edu/ml/datasets/Shill+Bidding+Dataset
+https://archive.ics.uci.edu/ml/datasets/Blood+Transfusion+Service+Center
+https://archive.ics.uci.edu/ml/datasets/Yeast
