@@ -1,11 +1,11 @@
 import numpy as np
 import pandas as pd
 from optparse import OptionParser
+from time import time
+from os.path import exists
 from sklearn.cluster import k_means
 from sklearn.metrics.cluster import adjusted_rand_score
 from sklearn.metrics import silhouette_score
-from time import time
-from os.path import exists
 from distance import get_dist_matrix, get_max_r_kmeans
 from k_clusters import k_clusters
 
@@ -56,11 +56,11 @@ def main():
     results.append([
       adjusted_rand_score(target, labels),
       silhouette_score(data, labels),
-      round(max_r, 7),
-      round(execution_time, 7)
+      max_r,
+      execution_time
     ])
   results_df = pd.DataFrame(results, columns=['Rand ajustado', 'Silhueta', 'Raio máximo', 'Tempo de execução']).describe()
-  results_df.to_csv(f'./out/{options.output_file}.csv')
+  results_df.to_csv(f'./out/{options.output_file}.csv', float_format='%.7f')
   
   results = []
   for i in range(options.iters):
@@ -72,11 +72,11 @@ def main():
     results.append([
       adjusted_rand_score(target, sk_labels),
       silhouette_score(data, sk_labels),
-      round(max_r_kmeans, 7),
-      round(execution_time, 7)
+      max_r_kmeans,
+      execution_time
     ])
   results_sk_learn_df = pd.DataFrame(results, columns=['Rand ajustado', 'Silhueta', 'Raio máximo', 'Tempo de execução']).describe()
-  results_sk_learn_df.to_csv(f'./out/{options.output_file}_sklearn.csv')
+  results_sk_learn_df.to_csv(f'./out/{options.output_file}_sklearn.csv', float_format='%.7f')
 
 if __name__ == '__main__':
   main()
