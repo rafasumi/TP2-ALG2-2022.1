@@ -9,7 +9,7 @@ def k_clusters(dist_matrix, n, k):
   # Lista com todos os pontos que não são centros
   points = list(range(n))
 
-  # Listas com os centros obtidos até o momento
+  # Listas com os centros escolhidos até o momento
   centers = [random_index]
   points.pop(random_index)
 
